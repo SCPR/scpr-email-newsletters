@@ -1,5 +1,6 @@
 require "slim"
 activate :bourbon
+activate :livereload
 
 ###
 # Compass

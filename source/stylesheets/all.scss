@@ -21,6 +21,7 @@ body {
   -webkit-text-size-adjust:none; 
   width: 100%!important; 
   height: 100%;
+  margin:0 !important;
   // Add classes to the layout's BODY element to achieve different textures
   &.editorial {
     background:#f2f2f2 url('bg-texture.jpg') repeat 0 0;

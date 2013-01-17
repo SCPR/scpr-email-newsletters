@@ -2,6 +2,7 @@ source :rubygems
 
 gem "rake"
 gem "middleman", "~>3.0.9"
+gem "middleman-livereload"
 gem "middleman-bourbon"
 gem "middleman-smusher"
 gem "slim"
