@@ -1,0 +1,82 @@
+doctype
+html xmlns="http://www.w3.org/1999/xhtml"
+  head
+    /! If you delete this meta tag, Half Life 3 will never be released.
+    meta content="width=device-width" name="viewport"
+    meta content="text/html; charset=UTF-8" http-equiv="Content-Type"
+    title 89.3 KPCC | [NEWSLETTER ]
+    == stylesheet_link_tag 'all'
+    css:
+      /* ------------------------------------------- 
+          PHONE
+          For clients that support media queries.
+          Nothing fancy. 
+      -------------------------------------------- */
+      @media only screen and (max-width: 600px) {
+  
+        a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+
+        div[class="column-wrap"] { border:none;}
+        div[class="content-main"] { border:none;}
+        div[class="column"] { width: auto!important; float:none!important;}
+  
+        table.social div[class="column"] {
+          width:auto!important;
+        }
+
+      }
+  body.editorial bgcolor="#F2F2F2"
+    /! HEADER
+    table.global-head
+      tr
+        td
+          .content-nopad
+            table width="100%"
+              tr
+                td width="50%"
+                  img#logo[src="images/logo-kpcc-sm.png"]
+                td width="50%" align="right"
+                  a.view-browser href="#"
+                    img[src="images/ico-view-browser.png"]
+                    | View in Browser
+    table.head-wrap
+      tr
+        td
+        td.header.container
+          .content-nopad
+            table width="100%"
+              tr
+                td
+                  img.header-cc[src="images/header-commconnection.png"]
+                td align="right"
+                  h6.collapse January 2, 2013
+        td
+    /! /HEADER
+    /! BODY
+    table.body-wrap
+      tr
+        td
+        td.container
+          == yield
+        td
+    /! /BODY
+    /! FOOTER
+    table.footer-wrap
+      tr
+        td
+        td.container
+          /! content
+          .content
+            table
+              tr
+                td align="center"
+                  p
+                    a href="#" Terms
+                    | \
+                    a href="#" Privacy
+                    | \
+                    a href="#"
+                      unsubscribe Unsubscribe
+          /! /content
+        td
+    /! /FOOTER
