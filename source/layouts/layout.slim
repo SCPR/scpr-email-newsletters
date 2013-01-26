@@ -1,44 +1,46 @@
-doctype
-html xmlns="http://www.w3.org/1999/xhtml"
+doctype html
+html
   head
     /! If you delete this meta tag, Half Life 3 will never be released.
     meta content="width=device-width" name="viewport"
     meta content="text/html; charset=UTF-8" http-equiv="Content-Type"
-    title 89.3 KPCC | [NEWSLETTER ]
+    title == yield_content(:newsletter_title)
     == stylesheet_link_tag 'all'
-    css:
-      /* ------------------------------------------- 
-          PHONE
-          For clients that support media queries.
-          Nothing fancy. 
-      -------------------------------------------- */
-      @media only screen and (max-width: 600px) {
-  
-        a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
-
-        div[class="column-wrap"] { border:none;}
-        div[class="content-main"] { border:none;}
-        div[class="column"] { width: auto!important; float:none!important;}
-  
-        table.social div[class="column"] {
-          width:auto!important;
-        }
-
-      }
+    style data-premailer="ignore" type="text/css"
+          | \/* -------------------------------------------
+          | PHONE
+          | For clients that support media queries.
+          | Nothing fancy.
+          | \-------------------------------------------- */
+          | @media only screen and (max-width: 600px) {
+          | div, p, a, li, td { -webkit-text-size-adjust:none; }
+          | a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+      
+          | div[class="column-wrap"] { border:none;}
+          | div[class="content-main"] { border-width:0px !important;padding:10px}
+          | div[class="column"] { width: auto!important; float:none!important;}
+      
+          | table.social div[class="column"] {
+          | width:auto!important;
+          | }
+          | \.callout img.icon {display:none}
+          | }
   body.editorial bgcolor="#F2F2F2"
-    /! HEADER
-    table.global-head
+    /! GLOBAL HEADER
+    table.global-head width="100%"
       tr
-        td
+        td width="100%"
           .content-nopad
             table width="100%"
               tr
                 td width="50%"
-                  img#logo[src="images/logo-kpcc-sm.png"]
+                  img#logo[src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{631245a8-337d-4df3-9a20-2d0cb5760de8}_logo-kpcc-sm.png" width="79" height="16"]
                 td width="50%" align="right"
-                  a.view-browser href="#"
-                    img[src="images/ico-view-browser.png"]
+                  a.view-browser href="http://app.info.americanpublicmediagroup.org/e/es?s=&lt;eloqua type='emailfield' syntax='siteid'/&gt;&e=&lt;eloqua type='emailfield' syntax='elqemailsaveguid'/&gt;&elq=&lt;eloqua type='emailfield' syntax='recipientid'/&gt;"
+                    img[src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{7b8c63c5-95cd-4db9-b9d2-0a0f9e4943c1}_ico-view-browser.png" width="14" height="19"]
                     | View in Browser
+    /! END GLOBAL HEADER
+    /! NEWSLETTER HEADER
     table.head-wrap
       tr
         td
@@ -47,11 +49,11 @@ html xmlns="http://www.w3.org/1999/xhtml"
             table width="100%"
               tr
                 td
-                  img.header-cc[src="images/header-commconnection.png"]
+                  == yield_content(:newsletter_logo)
                 td align="right"
                   h6.collapse January 2, 2013
         td
-    /! /HEADER
+    /! END NEWSLETTER HEADER
     /! BODY
     table.body-wrap
       tr
@@ -69,14 +71,20 @@ html xmlns="http://www.w3.org/1999/xhtml"
           .content
             table
               tr
-                td align="center"
+                td
                   p
-                    a href="#" Terms
-                    | \
-                    a href="#" Privacy
-                    | \
-                    a href="#"
-                      unsubscribe Unsubscribe
+                    a href="http://www.scpr.org/terms/" Terms
+                    span |
+                    a href="http://www.scpr.org/privacy/" Privacy
+                    span |
+                    a href="http://info.americanpublicmediagroup.org/LP=179" Update subscriptions
+                    span |
+                    a href="http://info.americanpublicmediagroup.org/LP=180" Unsubscribe from all emails 
+              tr
+                td
+                  p.colophon &copy; 2013 Southern California Public Radio
+                  p.colophon 474 S. Raymond Ave.
+                  p.colophon Pasadena, CA 91105
           /! /content
         td
     /! /FOOTER

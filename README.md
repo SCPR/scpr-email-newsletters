@@ -1,6 +1,6 @@
 # KPCC Email Newsletters
 
-A simple project, built on top of Middleman (http://middlemanapp.com/), for coding up HTML emails using all the modern front-end hotness (SASS, ERB, Slim) then compiling things down into CSS-inlined, road-hardened templates ready for the cold, cruel world of email clients. 
+A simple project, built on top of [Middleman](http://middlemanapp.com/), for coding up HTML emails using all the modern front-end hotness (SASS, ERB, Slim) then compiling things down into CSS-inlined, road-hardened templates ready for the cold, cruel world of email clients. 
 
 ## Installation
 
@@ -24,7 +24,9 @@ Either set up the project to use Pow, or run the Middleman development server:
 
 ### Stylesheet Authoring
 
-Base styles are provided in `all.scss`. These styles are based on Zurb's Responsive Email Templates () 
+Core styles are provided in `all.scss`. These styles are based on [Zurb's Responsive Email Templates](http://www.zurb.com/playground/responsive-email-templates).
+
+I've also inclouded Thoughtbot's [Bourbon](http://bourbon.io) which gives you a lean but powerful library of SASS mixins to work with.
 
 ### Handling Media Queries
 
@@ -37,3 +39,7 @@ Once you're done with development and ready to inline your CSS, run this command
 This will compile all of your templates and CSS, then run everything through Premailer to inline the CSS. We're using an SCPR-forked version of the Premailer gem in order to add support for Premailer ignoring media queries during the build process. 
 
 The results of the build process are located in the imaginatively-named `build` directory, and include a .zip file of the entire package.
+
+## Post-build
+
+Right now my thinking is that these templates will be decorated with [Mailchimp's template syntax](http://kb.mailchimp.com/article/getting-started-with-mailchimps-template-language) so that they're ready to 

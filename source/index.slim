@@ -1,42 +1,223 @@
+- content_for(:newsletter_title) do
+  | 89.3 KPCC | Newsletter Components
+- content_for(:newsletter_logo) do
+  img.header-cc[src="images/header-commconnection.png" width="345" height="31"]
+
 .content-main
   table
     tr
       td
-        h3 Hi, Elijah Baily
-        p.lead Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.
-        p Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.
-        /! Callout Panel
-        p.callout
-          | Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.
-          a href="#"
-        /! /Callout Panel
-        /! social & contact
-        table.social width="100%"
+        table.toc bgcolor="#d4f5ff"
           tr
             td
-              /! column 1
-              table.column align="left"
-                tr
-                  td
-                    h5 Connect with Us:
-                    p
-                      a.soc-btn.fb href="#" Facebook
-                      a.soc-btn.tw href="#" Twitter
-                      a.soc-btn.gp href="#" Google +
-              /! /column 1
-              /! column 2
-              table.column align="left"
-                tr
-                  td
-                    h5
-                      | Contact Info:
-                    p
-                      | Phone:
-                      strong 408.341.0600
-                      br/
-                      | Email:
-                      strong
-                        a href="emailto:hseldon@trantor.com"
-              /! /column 2
-              span.clear
-        /! /social & contact
+              p 
+                strong In this issue: 
+                | Van Gough’s self-portrait comes to LA, remembering Heull Howser, and Bernie Madoff’s reading materials.
+        h2 A rock, a shuttle, a King and a Batman: The best KPCC news photos of 2012
+        img src="http://placehold.it/600x338"
+        h1 This is an h1 heading
+        h2 This is an h2 heading
+        h3 This is an h3 heading
+        h4 This is an h4 heading
+        hr
+        h3 This is a section headline for a block of content
+        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        p Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        p In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+        hr
+        h3.section-heading Section Heading
+        table.content-img-floatleft cellpadding="0" cellspacing="0" border="0"
+          tr
+            td.figure width="33%" valign="top"
+              img src="http://placehold.it/195x140&text=1/3-width+image"
+            td.content width="67%"
+              h4: a href="#" This is a headline for a float-left content block
+              p Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+          tr
+            td.figure width="33%" valign="top"
+              img src="http://placehold.it/195x140&text=1/3-width+image"
+            td.content width="67%"
+              h4: a href="#" This is a headline for a float-left content block
+              p Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+          tr
+            td.figure width="33%" valign="top"
+              img src="http://placehold.it/195x140&text=1/3-width+image"
+            td.content width="67%"
+              h4: a href="#" This is a headline for a float-left content block
+              p Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        hr
+        h3.section-heading Section Heading
+        .content-block
+          h4: a href="#" This is a headline for a full-width content block
+          p Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        .content-block
+          h4: a href="#" This is a headline for a full-width content block
+          p Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        .content-block
+          h4: a href="#" This is a headline for a full-width content block
+          p Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        hr
+        h3.section-heading.twitter-heading 
+          img.ico-twitter src="images/ico-twitter.png" align="left"
+          | List of Tweets
+        table.content-img-floatleft.tweets cellpadding="0"  cellspacing="0" border="0"
+          tr
+            td.figure.avatar width="50" valign="top"
+              img src="http://placehold.it/50x50&text=avatar"
+            td.content width="90%" valign="top"
+              p Illinois House OKs Licenses For Undocumented Immigrants <a href="#">http://www.nbcchicago.com/blogs/ward-roo…</a> via <a href="#">@ward_room</a>
+          tr
+            td.figure.avatar width="50" valign="top"
+              img src="http://placehold.it/50x50&text=avatar"
+            td.content width="90%" valign="top"
+              p Illinois House OKs Licenses For Undocumented Immigrants <a href="#">http://www.nbcchicago.com/blogs/ward-roo…</a> via <a href="#">@ward_room</a>
+          tr
+            td.figure.avatar width="50" valign="top"
+              img src="http://placehold.it/50x50&text=avatar"
+            td.content width="90%" valign="top"
+              p Illinois House OKs Licenses For Undocumented Immigrants <a href="#">http://www.nbcchicago.com/blogs/ward-roo…</a> via <a href="#">@ward_room</a>
+          tr
+            td.figure.avatar width="50" valign="top"
+              img src="http://placehold.it/50x50&text=avatar"
+            td.content width="90%" valign="top"
+              p Illinois House OKs Licenses For Undocumented Immigrants <a href="#">http://www.nbcchicago.com/blogs/ward-roo…</a> via <a href="#">@ward_room</a>
+        hr
+        h4 This is a bulleted list of links
+        ul
+          li
+            a href="#" In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+            cite (The Latest)
+          li
+            a href="#" Nullam dictum felis eu pede mollis pretium.
+            cite (KPCC News)
+          li
+            a href="#" Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+            cite (Off-Ramp)
+          li
+            a href="#" Aenean vulputate eleifend tellus.
+            cite (Pass/Fail)
+          li
+            a href="#" Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            cite (AirTalk)
+        hr
+        h4.events-heading
+          img.ico-event src="images/ico-events.png" align="left"
+          | Event Listings
+        table.content-img-floatleft.events cellpadding="0"  cellspacing="0" border="0"
+          tr
+            td.figure width="17%" valign="top"
+              img src="http://placehold.it/98x98&text=square+thumb"
+            td.content width="83%"
+              h4: a href="#" Soul Food Junkies - A Film and Conversation
+              p.event-date January 17, 7pm - Crawford Family Forum
+              p To many African Americans, soul food is sacrament, ritual, and expression of cultural identity. But does it harm health more than it soothes the soul? 
+          tr
+            td.figure width="17%" valign="top"
+              img src="http://placehold.it/98x98&text=square+thumb"
+            td.content width="83%"
+              h4: a href="#" Soul Food Junkies - A Film and Conversation
+              p.event-date January 17, 7pm - Crawford Family Forum
+              p To many African Americans, soul food is sacrament, ritual, and expression of cultural identity. But does it harm health more than it soothes the soul?
+        hr
+        .ad
+          img src="http://placehold.it/596x100/dddddd/ffffff/&text=ad+unit"
+        
+        /! Callout Panel - Gray
+        .callout.gray bgcolor="#efefef"
+          table width="100%"
+            tr
+              td width="68%"
+                h4 Want someone to take a certain action?
+              td width="32%" align="right"
+                a.btn.dk-blue href="#" Call to action
+        /! Callout Panel - Dark Gray
+        .callout.dk-gray bgcolor="#3d3d3d"
+          table width="100%"
+            tr
+              td width="68%"
+                h4: em Want someone to take a certain action?
+              td width="32%" align="right"
+                a.btn.blue href="#" Call to action
+        /! Callout Panel - Orange
+        .callout.orange bgcolor="#f37a00"
+          table width="100%"
+            tr
+              td width="68%"
+                h4 Want someone to take a certain action?
+              td width="32%" align="right"
+                a.btn.dk-orange href="#" Call to action
+        /! Callout Panel - Dark Orange
+        .callout.dk-orange bgcolor="#b24401"
+          table width="100%"
+            tr
+              td width="68%"
+                h4 Want someone to take a certain action?
+              td width="32%" align="right"
+                a.btn.orange href="#" Call to action
+        /! Callout Panel - No BG, Top & Bottom Border
+        .callout.white.horiz-borders
+          .inner
+            table width="100%"
+              tr
+                td width="68%"
+                  h4 Want someone to take a certain action?
+                td width="32%" align="right"
+                  a.btn.orange.alt href="#" Call to action
+        /! Callout Panel - Dark Gray w/ Icon
+        .callout.dk-gray bgcolor="#3d3d3d"
+          table width="100%"
+            tr
+              td width="68%"
+                img src="http://placehold.it/50x50&text=icon" align="left"
+                h4 Want someone to take a certain action?
+              td width="32%" align="right"
+                a.btn.blue href="#" Call to action
+        /! Callout Panel - Membership
+        .callout.gray.horiz-borders.membership bgcolor="#efefef"
+          .inner
+            table width="100%"
+              tr
+                td width="68%"
+                  h4 Become a member and help power KPCC!
+                td width="32%" align="right"
+                  a.btn.blue.alt.pledge href="#"
+                    img.ico-pledge src="images/ico-pledge.png" align="left"
+                    | Pledge Now
+        /! Callout Panel - Breaking News Alerts Signup
+        .callout.orange.breaking-news-signup bgcolor="#f37a00"
+          table width="100%"
+            tr
+              td width="68%" align="right"
+                h4: em Sign up for KPCC breaking news alerts!
+              td width="32%" align="right"
+                a.btn.dk-orange href="#" Subscribe
+                
+        /! Pledge & Social
+        .social-wrapper
+          table.social width="100%" bgcolor="#EBEBEB"
+            tr
+              td
+                /! column 1
+                table.column align="left"
+                  tr
+                    td
+                      h5 Become a KPCC Sustainer
+                      h3: em More of the station you love. 
+                      h3: em Fewer pledge drives. 
+                      a.btn.blue.alt.pledge href="#"
+                        img.ico-pledge src="images/ico-pledge.png" align="left"
+                        | Pledge Now
+                     
+                /! /column 1
+                /! column 2
+                table.column align="left"
+                  tr
+                    td
+                      h5 Connect with KPCC
+                      p
+                        a.soc-btn.fb href="#" Facebook
+                        a.soc-btn.tw href="#" Twitter
+                        a.soc-btn.gp href="#" Google +
+                /! /column 2
+                span.clear
+        /! End Pledge & Social
