@@ -1,47 +1,59 @@
 - content_for(:newsletter_title) do
   | 89.3 KPCC | Breaking News
 - content_for(:newsletter_logo) do
-  .content-nopad
-    table width="100%"
-      tr
-        td
-         img.header-cc[src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{3d85c9a2-65c2-406d-930e-f8640a6fbb88}_header-breakingnews.png" width="269" height="25"]
-        td align="right"
-          h6.collapse January 2, 2013
-
-.content-main
-  table
+  table.content-nopad border="0" cellspacing="0" cellpadding="0"
     tr
       td
-        h2 LA Unified superintendents sued over teacher sex abuse
-        p The current Los Angeles schools superintendent and five of his predecessors are being sued on grounds that they intentionally quashed complaints about teacher sex abuse.
-        hr
-        h4 For more information:
-        p: a.btn.orange.alt href="#" Read the story online 
-        /! Pledge & Social
-        .social-wrapper
-          table.social width="100%" bgcolor="#EBEBEB"
-            tr
-              td
-                /! column 1
-                table.column align="left"
-                  tr
-                    td
-                      h5 Become a KPCC Sustainer
-                      h3: em More of the station you love. 
-                      h3: em Fewer pledge drives. 
-                      a.btn.blue.alt.pledge href="https://scprcontribute.publicradio.org/"
-                        img.ico-pledge src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{0a8f0d6d-b26b-44e9-99b9-4cfb5b799751}_ico-pledge.png" align="left"
-                        | Pledge Now
-                     
-                /! /column 1
-                /! column 2
-                table.column align="left"
-                  tr
-                    td
-                      h5 Connect with KPCC
-                      p
-                        a.soc-btn.fb href="https://www.facebook.com/kpcc" Facebook
-                        a.soc-btn.tw href="https://twitter.com/kpcc" Twitter
-                /! /column 2
-                span.clear
+           img.header-cc[src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{3d85c9a2-65c2-406d-930e-f8640a6fbb88}_header-breakingnews.png" width="269" height="25"]
+           h6.collapse January 2, 2013
+
+table.content-main bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0"
+  tr
+    td.content-main-container
+      table width="100%" border="0" cellspacing="0" cellpadding="0"
+        tr
+          td
+            h2 LA Unified superintendents sued over teacher sex abuse
+            p The current Los Angeles schools superintendent and five of his predecessors are being sued on grounds that they intentionally quashed complaints about teacher sex abuse.
+            hr
+            h4 For more information:
+            p
+              table.btn.orange.alt border="0" cellspacing="0" cellpadding="0"
+                tr
+                  td
+                    a href="#" Read the story online
+            /! Pledge & Social
+            .social-wrapper
+              table.social width="100%" bgcolor="#EBEBEB"
+                tr
+                  td
+                    /! column 1
+                    table.column align="left"
+                      tr
+                        td
+                          h5 Become a KPCC Sustainer
+                          h3: em More of the station you love. 
+                          h3: em Fewer pledge drives. 
+                          table.btn.blue.alt.pledge border="0" cellspacing="0" cellpadding="0"
+                            tr
+                              td
+                                a href="https://scprcontribute.publicradio.org/"
+                                  img.ico-pledge src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{0a8f0d6d-b26b-44e9-99b9-4cfb5b799751}_ico-pledge.png" align="left" width="32" height="22"
+                                  | Pledge Now
+                    /! /column 1
+                    /! column 2
+                    table.column align="left"
+                      tr
+                        td
+                          h5 Connect with KPCC
+                          p
+                            table.soc-btn.fb border="0" cellspacing="0" cellpadding="0"
+                              tr
+                                td align="center"
+                                  a href="http://facebook.com/kpcc" Facebook
+                            table.soc-btn.tw border="0" cellspacing="0" cellpadding="0"
+                              tr
+                                td align="center"
+                                  a href="http://twitter.com/kpcc" Twitter
+                    /! /column 2
+                    span.clear
