@@ -164,7 +164,9 @@ table.content-img-floatleft.tweets {
 // Callouts
 .callout {
   margin-bottom:18px;
-  padding:18px;
+  td.callout-container {
+    padding:18px;
+  }
   &.white {
     h4, em, p {color:$orangeDark!important;}
   }
@@ -221,7 +223,9 @@ table.content-img-floatleft.tweets {
     background-image:url('http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{3aaa27ef-71a4-4c22-b95b-38db3f82db1a}_bg-breakingnews.png');
     background-position:0 0;
     background-repeat:no-repeat;
-    padding:13px 18px;
+    .callout-container {
+      padding:13px 18px;
+    }
   }
   &.app-promo {
     padding:0;

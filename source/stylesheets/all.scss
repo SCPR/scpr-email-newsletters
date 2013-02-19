@@ -299,10 +299,11 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
   display:block; 
 }
 .content-nopad {
-  display:block;
+  display:block !important;
+  max-width:600px !important;
   padding:0;
-  max-width:600px;
-  margin:0 auto;
+  margin:0 auto !important;
+  clear:both !important;
   width:600px; 
 }
 .content-main {

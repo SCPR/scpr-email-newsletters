@@ -9,8 +9,8 @@ html
     style data-premailer="ignore" type="text/css"
           | @media only screen and (max-width: 600px) {
           | div, p, a, li, td { -webkit-text-size-adjust:none; }
-          | a[class="btn"] { display:block !important; margin-bottom:10px !important; background-image:none !important; margin-right:0!important;} 
-          | td[class="container"] {width:100% !important;}
+          | table[class="btn"] { display:block !important; margin-bottom:10px !important; background-image:none !important; margin-right:0!important;} 
+          | td[class="container"], td[class="header container"] {width:98% !important;padding-right:1% !important;padding-left:1% !important;}
           | table[class="content-main"] { border-width:0px;border:0;}
           | table[class="content-nopad"] {width:100% !important;}
           | table.social div[class="column"] { width:auto !important;}
@@ -33,7 +33,7 @@ html
         td
     /! END GLOBAL HEADER
     /! NEWSLETTER HEADER
-    table.head-wrap
+    table.head-wrap border="0" cellspacing="0" cellpadding="0"
       tr
         td
         td.header.container
@@ -41,7 +41,7 @@ html
         td
     /! END NEWSLETTER HEADER
     /! BODY
-    table.body-wrap
+    table.body-wrap border="0" cellspacing="0" cellpadding="0"
       tr
         td
         td.container
