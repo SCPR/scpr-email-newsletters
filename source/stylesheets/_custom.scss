@@ -194,6 +194,12 @@ table.content-img-floatleft.tweets {
       color:unquote("#ffffff")!important;
     }
   }
+  &.dk-blue {
+    background-color:$blueDark;
+    h2, h4, em, p {
+      color:unquote("#ffffff")!important;
+    }
+  }
   &.deep-blue {
     background-color:#002C55;
     h4, em, p, a {

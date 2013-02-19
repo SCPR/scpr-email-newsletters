@@ -42,4 +42,9 @@ The results of the build process are located in the imaginatively-named `build` 
 
 ## Post-build
 
-Right now my thinking is that these templates will be decorated with [Mailchimp's template syntax](http://kb.mailchimp.com/article/getting-started-with-mailchimps-template-language) so that they're ready to 
+Each build template needs to be uploaded into Eloqua, most likely created as a template. Since Eloqua manages the email headers and footers as global files, you'll need to manuall remove the Global Header and Footer markup from the code before uploading to Eloqua.
+
+## Todo
+
+-- Refactor all SASS; shit's a mess right now and needs to be parsed out into a sensible files structure, commented, and DRY-ed up.
+-- Extract the core project into a public repository that could be used for any email front-end dev project.
