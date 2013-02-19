@@ -5,6 +5,13 @@ table.head-wrap { width: 100%;}
 table.global-head {
   background-color:#3d3d3d;
   width:100%;
+  table.global-head-content {
+    width:100%;
+    td {
+      padding:3px 0;
+      width:50%;
+    }
+  }
 }
   a.view-browser {
     color:#747474;
@@ -21,7 +28,7 @@ table.global-head {
 #logo {
   width:79px;
   height:16px;
-  padding:6px 0;
+  padding:8px 0 4px;
 }
 
 .header.container {padding:18px 0 14px;}
@@ -49,7 +56,7 @@ table.content-img-floatleft {
     padding-top:18px;
     border-bottom:1px solid #ebebeb;
   }
-  td.content {
+  td.content-block {
     padding:18px 0 18px 14px;
     h4 {
       margin-top:0;
@@ -74,10 +81,20 @@ table.toc {
     }
   }
 }
+// Event Info
+.event-info {
+  p {
+    color:$white;
+    margin:0;
+    a {
+      color:$blue;
+    }
+  }
+}
 
 // Event Listings Module
 .events-heading {
-  color:$orangeDark;
+  color:$orangeDark!important;
   margin-bottom:24px;
 }
 .ico-event {
@@ -91,7 +108,7 @@ table.content-img-floatleft.events {
         padding-top:0;
       }
     }
-    td.content {
+    td.content-block {
       h4 {
         margin-bottom:2px;
       }
@@ -113,7 +130,7 @@ table.content-img-floatleft.events {
 
 // Twitter Module
 .twitter-heading {
-  color:#00b9f3;
+  color:#00b9f3!important;
 }
 .ico-twitter {
   width:23px;
@@ -149,7 +166,7 @@ table.content-img-floatleft.tweets {
   margin-bottom:18px;
   padding:18px;
   &.white {
-    h4, em, p {color:$orangeDark;}
+    h4, em, p {color:$orangeDark!important;}
   }
   &.gray {
     background-color:$grayLight;
@@ -160,19 +177,33 @@ table.content-img-floatleft.tweets {
   &.dk-gray {
     background-color:$grayDark;
     h4, em, p {
-      color:$white;
+      color:unquote("#ffffff")!important;
     }
   }
   &.orange {
     background-color:$orange;
     h4, em, p {
-      color:$white;
+      color:unquote("#ffffff")!important;
     }
   }
   &.dk-orange {
     background-color:$orangeDark;
     h4, em, p {
-      color:$white;
+      color:unquote("#ffffff")!important;
+    }
+  }
+  &.deep-blue {
+    background-color:#002C55;
+    h4, em, p, a {
+      color:unquote("#ffffff")!important;
+    }
+    .first {
+      font-size:22px;
+      margin-top:0;
+    }
+    .last {
+      line-height:14px;
+      margin:0;
     }
   }
   &.horiz-borders {
@@ -187,9 +218,12 @@ table.content-img-floatleft.tweets {
     }
   }
   &.breaking-news-signup {
-    background-image:url('../images/bg-breakingnews.png');
+    background-image:url('http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{3aaa27ef-71a4-4c22-b95b-38db3f82db1a}_bg-breakingnews.png');
     background-position:0 0;
     background-repeat:no-repeat;
     padding:13px 18px;
+  }
+  &.app-promo {
+    padding:0;
   }
 }

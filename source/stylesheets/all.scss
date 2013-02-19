@@ -23,6 +23,7 @@ body {
   width: 100%!important; 
   height: 100%;
   margin:0 !important;
+  padding:0 !important;
   // Add classes to the layout's BODY element to achieve different textures
   &.editorial {
     background-color:#f2f2f2;
@@ -31,12 +32,15 @@ body {
     background-repeat:repeat;
   }
 }
+table tbody {
+  width:100%;
+}
 
 
 /* ------------------------------------- 
     ELEMENTS 
 ------------------------------------- */
-a { color: $blueDark;}
+a { color: $blueDark;text-decoration:none;}
 
 .btn {
   text-decoration:none;
@@ -47,9 +51,18 @@ a { color: $blueDark;}
   font-size:18px;
   font-weight:bold;
   text-align:center;
-  cursor:pointer;
   display: inline-block;
   white-space:nowrap;
+  a {
+    text-decoration:none;
+    color:$white;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+  }
   &.blue {
     background-color:$blue;
     border:1px solid lighten($blue, 25%);
@@ -78,6 +91,7 @@ a { color: $blueDark;}
   }
   &.pledge {
     padding:8px;
+    width:160px!important;
     img.ico-pledge {
       width:32px;
       height:22px;
@@ -98,21 +112,25 @@ table.social {
 }
 .social .soc-btn {
   border:1px solid $white;
-  padding: 3px 7px;
-  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:16px;
-  font-weight:bold;
-  margin-bottom:10px;
-  text-decoration:none;
-  color: $white;
+  margin-bottom:10px;  
   display:block;
-  text-align:center;
+  td {
+    padding: 5px 7px;
+    text-align:center;
+  }
+  a {
+    color: $white;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    text-decoration:none;
+  }
 }
-a.fb { background-color: #3B5998!important; }
-a.tw { background-color: #1daced!important; }
-a.gp { background-color: #DB4A39!important; }
-a.kpcc { background-color: $orangeDark!important; }
-a.ms { background-color: $black!important; }
+.fb { background-color: #3B5998; }
+.tw { background-color: #1daced; }
+.gp { background-color: #DB4A39; }
+.kpcc { background-color: $orangeDark; }
+.ms { background-color: $black; }
 
 .sidebar .soc-btn { 
   display:block;
@@ -120,7 +138,7 @@ a.ms { background-color: $black!important; }
 }
 
 img[align="left"] {
-  margin-right:6px;
+  margin-right:18px;
 }
 
 /* ------------------------------------- 
@@ -173,9 +191,19 @@ h6 { font-weight:400; font-size: 14px;}
   color:$orangeDark!important;
   font-size:20px;
   text-transform:uppercase;
+  &.facebook {
+    color:#3B5998!important;
+    text-transform:none;
+    img  {
+      width:24px;
+      height:20px;
+      margin-right:5px;
+    }
+  }
 }
 
 .collapse { margin:0!important;}
+.center {text-align:center;}
 
 p, ul { 
   color:#3d3d3d;
@@ -188,6 +216,7 @@ p {margin:14px 0 18px;}
 p.lead { font-size:17px; }
 p.last { margin-bottom:0px;}
 p.caption{font-size:12px;}
+p.small{color:#666666!important;font-size:12px;}
 
 ul {
   margin-left:12px;
@@ -259,6 +288,7 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
   max-width:600px !important;
   margin:0 auto !important; /* makes it centered */
   clear:both !important;
+  width:600px;
 }
 
 /* This should also be a block element, so that it will fill 100% of the .container */
@@ -269,10 +299,11 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
   display:block; 
 }
 .content-nopad {
+  display:block;
   padding:0;
   max-width:600px;
   margin:0 auto;
-  display:block; 
+  width:600px; 
 }
 .content-main {
   background-color:$white;
@@ -281,12 +312,14 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
   border-left:1px solid $gray;
   border-right:1px solid $gray;
   display:block; 
-  padding:18px;
   margin:0 auto;
   max-width:600px;
   .content {
     padding:0;
   }
+}
+.content-main-container {
+  padding:18px;
 }
 
 /* Let's make sure tables in the content area are 100% wide */
@@ -300,6 +333,10 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
   table { width:100%;}
 }
 .column tr td { padding: 15px; }
+.column tr td table.btn {
+  width:auto;
+  td { padding:0;}
+} 
 .column-wrap { 
   background-color:$white;
   border:1px solid $gray;

@@ -7,51 +7,37 @@ html
     title == yield_content(:newsletter_title)
     == stylesheet_link_tag 'all'
     style data-premailer="ignore" type="text/css"
-          | \/* -------------------------------------------
-          | PHONE
-          | For clients that support media queries.
-          | Nothing fancy.
-          | \-------------------------------------------- */
           | @media only screen and (max-width: 600px) {
           | div, p, a, li, td { -webkit-text-size-adjust:none; }
-          | a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
-      
-          | div[class="column-wrap"] { border:none;}
-          | div[class="content-main"] { border-width:0px !important;padding:10px}
-          | div[class="column"] { width: auto!important; float:none!important;}
-      
-          | table.social div[class="column"] {
-          | width:auto!important;
-          | }
-          | \.callout img.icon {display:none}
+          | a[class="btn"] { display:block !important; margin-bottom:10px !important; background-image:none !important; margin-right:0!important;} 
+          | td[class="container"] {width:100% !important;}
+          | table[class="content-main"] { border-width:0px;border:0;}
+          | table[class="content-nopad"] {width:100% !important;}
+          | table.social div[class="column"] { width:auto !important;}
+          | td[class="content-main-container"] {padding:10px !important;}
+          | table[class="callout"] img.icon {display:none;}
+          | table[class="head-wrap"] img {height:auto;}
           | }
   body.editorial bgcolor="#F2F2F2"
     /! GLOBAL HEADER
-    table.global-head width="100%"
+    table.global-head border="0" cellspacing="0" cellpadding="0"
       tr
-        td width="100%"
-          .content-nopad
-            table width="100%"
-              tr
-                td width="50%"
-                  img#logo[src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{631245a8-337d-4df3-9a20-2d0cb5760de8}_logo-kpcc-sm.png" width="79" height="16"]
-                td width="50%" align="right"
-                  a.view-browser href="http://app.info.americanpublicmediagroup.org/e/es?s=&lt;eloqua type='emailfield' syntax='siteid'/&gt;&e=&lt;eloqua type='emailfield' syntax='elqemailsaveguid'/&gt;&elq=&lt;eloqua type='emailfield' syntax='recipientid'/&gt;"
-                    img[src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{7b8c63c5-95cd-4db9-b9d2-0a0f9e4943c1}_ico-view-browser.png" width="14" height="19"]
-                    | View in Browser
+        td
+        td.container
+          table.global-head-content border="0" cellspacing="0" cellpadding="0"
+            tr
+              td
+                img#logo[src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{631245a8-337d-4df3-9a20-2d0cb5760de8}_logo-kpcc-sm.png" width="79" height="16"]
+              td align="right"
+                <a class="view-browser" href="http://app.info.americanpublicmediagroup.org/e/es?s=<eloqua%20type='emailfield'%20syntax='siteid'/>&e=<eloqua%20type='emailfield'%20syntax='elqemailsaveguid'/>&elq=<eloqua%20type='emailfield'%20syntax='recipientid'/>"> <img src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{7b8c63c5-95cd-4db9-b9d2-0a0f9e4943c1}_ico-view-browser.png" width="14" height="19"> View in Browser</a>
+        td
     /! END GLOBAL HEADER
     /! NEWSLETTER HEADER
     table.head-wrap
       tr
         td
         td.header.container
-          .content-nopad
-            table width="100%"
-              tr
-                td
-                  == yield_content(:newsletter_logo)
-                td align="right"
-                  h6.collapse January 2, 2013
+          == yield_content(:newsletter_logo)
         td
     /! END NEWSLETTER HEADER
     /! BODY
@@ -63,6 +49,7 @@ html
         td
     /! /BODY
     /! FOOTER
+    == yield_content(:newsletter_sponsor)
     table.footer-wrap
       tr
         td
