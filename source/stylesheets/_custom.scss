@@ -178,19 +178,19 @@ table.content-img-floatleft.tweets {
   }
   &.dk-gray {
     background-color:$grayDark;
-    h4, em, p {
+    h2, h4, em, p {
       color:unquote("#ffffff")!important;
     }
   }
   &.orange {
     background-color:$orange;
-    h4, em, p {
+    h2, h4, em, p {
       color:unquote("#ffffff")!important;
     }
   }
   &.dk-orange {
     background-color:$orangeDark;
-    h4, em, p {
+    h2, h4, em, p {
       color:unquote("#ffffff")!important;
     }
   }
@@ -205,6 +205,14 @@ table.content-img-floatleft.tweets {
     }
     .last {
       line-height:14px;
+      margin:0;
+    }
+  }
+  &.lead-heading {
+    td.callout-container {
+      padding:10px;
+    }
+    h2 {
       margin:0;
     }
   }
