@@ -1,77 +1,199 @@
-doctype html
-html
+doctype transitional
+html xmlns="http://www.w3.org/1999/xhtml"
+
   head
-    /! If you delete this meta tag, Half Life 3 will never be released.
-    meta content="width=device-width" name="viewport"
     meta content="text/html; charset=UTF-8" http-equiv="Content-Type"
-    title == yield_content(:newsletter_title)
-    == stylesheet_link_tag 'all'
-    style data-premailer="ignore" type="text/css"
-          | @media only screen and (max-width: 600px) {
-          | div, p, a, li, td { -webkit-text-size-adjust:none; }
-          | table[class="btn"] { display:block !important; margin-bottom:10px !important; background-image:none !important; margin-right:0!important;} 
-          | td[class="container"], td[class="header container"] {width:98% !important;padding-right:1% !important;padding-left:1% !important;}
-          | table[class="content-main"] { border-width:0px;border:0;}
-          | table[class="content-nopad"] {width:100% !important;}
-          | table.social div[class="column"] { width:auto !important;}
-          | td[class="content-main-container"] {padding:10px !important;}
-          | table[class="callout"] img.icon {display:none;}
-          | table[class="head-wrap"] img {height:auto;}
-          | }
-  body.editorial bgcolor="#F2F2F2"
-    /! GLOBAL HEADER
-    table.global-head border="0" cellspacing="0" cellpadding="0"
-      tr
-        td
-        td.container
-          table.global-head-content border="0" cellspacing="0" cellpadding="0"
-            tr
-              td
-                img#logo[src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{631245a8-337d-4df3-9a20-2d0cb5760de8}_logo-kpcc-sm.png" width="79" height="16"]
-              td align="right"
-                <a class="view-browser" href="http://app.info.americanpublicmediagroup.org/e/es?s=<eloqua%20type='emailfield'%20syntax='siteid'/>&e=<eloqua%20type='emailfield'%20syntax='elqemailsaveguid'/>&elq=<eloqua%20type='emailfield'%20syntax='recipientid'/>"> <img src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{7b8c63c5-95cd-4db9-b9d2-0a0f9e4943c1}_ico-view-browser.png" width="14" height="19"> View in Browser</a>
-        td
-    /! END GLOBAL HEADER
-    /! NEWSLETTER HEADER
-    table.head-wrap border="0" cellspacing="0" cellpadding="0"
-      tr
-        td
-        td.header.container
-          == yield_content(:newsletter_logo)
-        td
-    /! END NEWSLETTER HEADER
-    /! BODY
-    table.body-wrap border="0" cellspacing="0" cellpadding="0"
-      tr
-        td
-        td.container
-          == yield
-        td
-    /! /BODY
-    /! FOOTER
-    == yield_content(:newsletter_sponsor)
-    table.footer-wrap
-      tr
-        td
-        td.container
-          /! content
-          .content
-            table
+      title == yield_content(:newsletter_title)
+      
+      == stylesheet_link_tag 'all_bulletproof'
+      style data-premailer="ignore" type="text/css"
+        | @media only screen and (max-width: 600px){
+        | body,table,td,p,a,li,blockquote{
+        |  -webkit-text-size-adjust:none !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | body{
+        | width:100% !important;
+        | min-width:100% !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | table[id=bodyTable]{
+        | padding:10px !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | table[id=templateContainer]{
+        | max-width:600px !important;
+        | width:100% !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | h1{
+        | font-size:28px !important;
+        | line-height:100% !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | h2{
+        | font-size:24px !important;
+        | line-height:100% !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | h3{
+        | font-size:20px !important;
+        | line-height:100% !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | h4{
+        | font-size:16px !important;
+        | line-height:100% !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | img[id=headerImage]{
+        | height:auto !important;
+        | max-width:268px !important;
+        | width:100% !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | td[class=headerContent]{
+        | font-size:21px !important;
+        | line-height:150% !important;
+        | padding-top:30px !important;
+        | padding-right:10px !important;
+        | padding-bottom:20px !important;
+        | padding-left:10px !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | td[class=bodyContainer]{
+        | padding-right:10px !important;
+        | padding-left:10px !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | table[id=bodyContentBlock]{
+        | border:0 !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | td[class=bodyContentInner]{
+        | padding-right:10px !important;
+        | padding-left:10px !important;
+        | padding-top:10px !important;
+        | padding-bottom:10px !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | td h4[class=events-heading] img{
+        | width:19px !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | td h3.facebook img{
+        | width:24px !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | td h3.twitter-heading img{
+        | width:23px !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | td[class=callout-container] table img{
+        | width:auto !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | table.pledge img.ico-pledge{
+        | width:33px !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | td[class=bodyContentInner] img{
+        | height:auto !important;
+        | max-width:600px !important;
+        | width:100% !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | td[class=bodyContent]{
+        | font-size:19px !important;
+        | line-height:125% !important;
+        | }
+        | }
+        | @media only screen and (max-width: 600px){
+        | td[class=footerContent]{
+        | font-size:13px !important;
+        | line-height:150% !important;
+        | padding-left:10px !important;
+        | padding-right:10px !important;
+        | }
+        | }
+body[leftmargin="0" marginheight="0" marginwidth="0" offset="0" topmargin="0"]
+    center
+      table#bodyTable border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"
+        tr
+          td align="center" valign="top"
+            /! // BEGIN GLOBAL HEADER
+            table.globalhead border="0" cellpadding="10" cellspacing="0" width="100%"
               tr
-                td
-                  p
-                    a href="http://www.scpr.org/terms/" Terms
-                    span |
-                    a href="http://www.scpr.org/privacy/" Privacy
-                    span |
-                    a href="http://info.americanpublicmediagroup.org/LP=179" Update subscriptions
-                    span |
-                    a href="http://info.americanpublicmediagroup.org/LP=180" Unsubscribe from all emails 
+                td.globalheadContent align="center" valign="top"
+                  table#templateContainer border="0" cellpadding="0" cellspacing="0" width="600"
+                    tr
+                      td.preheaderContent
+                        img#logo[src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{631245a8-337d-4df3-9a20-2d0cb5760de8}_logo-kpcc-sm.png" width="79" height="16"]
+                      td.preheaderContent align="right" width="220"
+                        <a class="view-browser" href="http://app.info.americanpublicmediagroup.org/e/es?s=<eloqua%20type='emailfield'%20syntax='siteid'/>&e=<eloqua%20type='emailfield'%20syntax='elqemailsaveguid'/>&elq=<eloqua%20type='emailfield'%20syntax='recipientid'/>"> <img src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{7b8c63c5-95cd-4db9-b9d2-0a0f9e4943c1}_ico-view-browser.png" width="14" height="19"> View in Browser</a>
+            /! END GLOBAL HEADER \\
+            /! // BEGIN CONTAINER
+            table#templateContainer border="0" cellpadding="0" cellspacing="0" width="600"
               tr
-                td
-                  p.colophon &copy; 2013 Southern California Public Radio
-                  p.colophon 474 S. Raymond Ave.
-                  p.colophon Pasadena, CA 91105
-          /! /content
-        td
-    /! /FOOTER
+                td align="center" valign="top"
+                  /! // BEGIN HEADER
+                  table#templateHeader border="0" cellpadding="0" cellspacing="0" width="100%"
+                    tr
+                      td align="center" valign="top"
+                        table border="0" cellpadding="0" cellspacing="0" width="100%"
+                          tr
+                            td.headerContent
+                              == yield_content(:newsletter_logo)
+                  /! END HEADER \\
+              tr
+                td.bodyContainer align="center" valign="top"
+                  /! // BEGIN BODY
+                  table#bodyContentBlock border="0" cellpadding="0" cellspacing="0" width="100%"
+                    tr
+                      td.bodyContentInner valign="top"
+                        == yield
+                  /! END BODY \\
+              tr
+                td align="center" valign="top"
+                  == yield_content(:newsletter_sponsor)
+                  /! // BEGIN FOOTER
+                  table#templateFooter border="0" cellpadding="0" cellspacing="0" width="100%"
+                    tr
+                      td align="center" style="padding-top:16px;padding-bottom:40px;padding-left:15px;padding-right:15px;" valign="top"
+                        table border="0" cellpadding="0" cellspacing="0" width="100%"
+                          tr
+                            td.footerContent valign="top"
+                              p
+                                a href="http://www.scpr.org/terms/" Terms
+                                span |
+                                a href="http://www.scpr.org/privacy/" Privacy
+                                span |
+                                a href="http://info.americanpublicmediagroup.org/LP=179" Update subscriptions
+                                span |
+                                a href="http://info.americanpublicmediagroup.org/LP=180" Unsubscribe from all emails 
+                          tr
+                            td.footerContent colspan="3" style="padding-top:20px;" valign="top"
+                              p.colophon &copy; 2013 Southern California Public Radio
+                              p.colophon 474 S. Raymond Ave.
+                              p.colophon Pasadena, CA 91105
+                  /! END FOOTER \\
+            /! END CONTAINER \\

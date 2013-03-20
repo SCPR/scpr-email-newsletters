@@ -1,0 +1,132 @@
+// Body-level Layout Styles
+// ----------------------------------------
+body,#bodyTable{
+  background-color:#f2f2f2;
+  background-image: url('http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{1c497704-8c95-49c6-a5fd-e60d32c91a60}_bg-texture.jpg');
+  background-position:left top;
+  background-repeat:repeat;
+  -webkit-font-smoothing:antialiased; 
+  -webkit-text-size-adjust:none; 
+}
+
+// Global Header Layout Styles
+// ----------------------------------------
+.globalhead{
+  background-color:#3d3d3d;
+  border-bottom:0;
+  td.globalheadContent {
+    padding:9px;
+  }
+  a.view-browser:link, a.view-browser:visited, a.view-browser.yshortcuts {
+    color:#747474;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    text-decoration:none;
+    img {
+      margin-right:4px;
+      width:14px;
+      height:19px;
+      vertical-align:bottom;
+    }
+  }
+}
+.preheaderContent{
+  color:#FFFFFF;
+  font-family:Helvetica;
+  font-size:11px;
+  line-height:125%;
+}
+
+// Newsletter Header Layout Styles
+// ----------------------------------------
+.headerContent{
+  color:#505050;
+  font-family:Helvetica;
+  font-size:18px;
+  font-weight:bold;
+  line-height:100%;
+  padding-top:18px;
+  padding-right:0;
+  padding-bottom:14px;
+  padding-left:0;
+  text-align:left;
+  vertical-align:middle;
+  a:link, a:visited, a .yshortcuts {
+    color:#505050;
+    font-weight:normal;
+    text-decoration:underline;
+  }
+  h6 {
+    color:#888888!important;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    margin:6px 0 2px 0;
+    text-shadow:0 1px 0 $white;
+  }
+}
+
+// Main Content Layout Styles
+// ----------------------------------------
+#bodyContentBlock{
+  background-color: white;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  .bodyContentInner {
+    padding:18px;
+  }
+}
+.bodyContent{
+  color:#FFFFFF;
+  font-family:Helvetica;
+  font-size:15px;
+  line-height:150%;
+  text-align:left;
+  a:link, a:visited, a .yshortcuts {
+    color:#FFFFFF;
+    font-weight:normal;
+    text-decoration:underline;
+  }
+  img{
+    display:inline;
+    height:auto;
+  }
+}
+
+// Footer Layout Styles
+// ----------------------------------------
+#templateFooter{
+  border-top:0;
+}
+.footerContent{
+  color:#808080;
+  font-family:Helvetica;
+  font-size:10px;
+  text-align:left;
+  p {
+    margin:0;
+    &.colophon {
+      color:#888888;
+      font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size:10px;
+      line-height:14px;
+    }
+  }
+  span {
+    color:#b2b2b2;
+    display:inline-block;
+    font-size:15px;
+    padding:0 6px;
+  }
+  a:link, a:visited, a .yshortcuts {
+    color:#888888;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:12px;
+    font-weight: bold;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+}

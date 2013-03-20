@@ -1,0 +1,338 @@
+/* ------------------------------------- 
+    UI ELEMENTS 
+------------------------------------- */
+
+a { color: $blueDark;text-decoration:none;}
+
+.btn {
+  text-decoration:none;
+  color:$white;
+  background-color: #666;
+  padding:8px 22px;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:18px;
+  font-weight:bold;
+  text-align:center;
+  display: inline-block;
+  white-space:nowrap;
+  a {
+    text-decoration:none;
+    color:$white;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  &.blue {
+    background-color:$blue;
+    border:1px solid lighten($blue, 25%);
+    text-shadow:0 1px 0 darken($blue, 35%);
+    &.alt {
+      border-color:darken($blue, 15%);
+    }
+  }
+  &.dk-blue {
+    background-color:$blueDark;
+    border:1px solid darken($blueDark, 15%);
+    text-shadow:0 1px 0 darken($blueDark, 35%);
+  }
+  &.orange {
+    background-color:$orange;
+    border:1px solid lighten($orange, 25%);
+    text-shadow:0 1px 0 darken($orange, 35%);
+    &.alt {
+      border-color:darken($orange, 15%);
+    }
+  }
+  &.dk-orange {
+    background-color:$orangeDark;
+    border:1px solid darken($orangeDark, 10%);
+    text-shadow:0 1px 0 darken($orangeDark, 35%);
+  }
+  &.pledge {
+    padding:8px;
+    width:160px!important;
+    img.ico-pledge {
+      width:32px;
+      height:22px;
+      margin-right:10px;
+    }
+  }
+}
+.social-wrapper{
+  border-bottom:1px solid $gray;
+  border-top:1px solid $gray;
+  padding:3px 0;
+}
+table.social {
+/*  padding:15px; */
+  background-color: #ebebeb;
+  border-bottom:1px solid $gray;
+  border-top:1px solid $gray;
+}
+.social .soc-btn {
+  border:1px solid $white;
+  margin-bottom:10px;  
+  display:block;
+  td {
+    padding: 5px 7px;
+    text-align:center;
+  }
+  a {
+    color: $white;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    text-decoration:none;
+  }
+}
+.fb { background-color: #3B5998; }
+.tw { background-color: #1daced; }
+.gp { background-color: #DB4A39; }
+.kpcc { background-color: $orangeDark; }
+.ms { background-color: $black; }
+
+.sidebar .soc-btn { 
+  display:block;
+  width:100%;
+}
+
+img[align="left"] {
+  margin-right:18px;
+}
+
+
+// Content Blocks
+table.content-img-floatleft {
+  tr:last-child {
+    td {border-bottom:0;}
+  }
+  td {
+    padding-bottom:18px;
+    padding-top:18px;
+    border-bottom:1px solid #ebebeb;
+  }
+  td.content-block {
+    padding:18px 0 18px 14px;
+    h4 {
+      margin-top:0;
+    }
+  }
+}
+
+// Table of Contents
+table.toc {
+  background-color:#d4f5ff;
+  border-bottom:1px solid #b2ced6;
+  border-top:1px solid #b2ced6;
+  td {
+    padding:10px 18px;
+    text-align:center;
+    p {margin:0;}
+    p, strong {
+      color:#1c1c1c;
+      font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size:15px;
+      line-height:21px;
+    }
+  }
+}
+// Event Info
+.event-info {
+  p {
+    color:$white;
+    margin:0;
+    a {
+      color:$blue;
+    }
+  }
+}
+
+// Event Listings Module
+.events-heading {
+  color:$orangeDark!important;
+  margin-bottom:24px;
+}
+.ico-event {
+  width:19px;
+  height:21px;
+}
+table.content-img-floatleft.events {
+  tr {
+    &:first-child {
+      td {
+        padding-top:0;
+      }
+    }
+    td.content-block {
+      h4 {
+        margin-bottom:2px;
+      }
+      p.event-date {
+        color:$blueDark;
+        font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size:12px;
+        font-weight:bold;
+        margin:0 0 10px 0;
+      }
+      p {
+        font-size:14px;
+        line-height:22px;
+        margin:0;
+      }
+    }
+  }
+}
+
+// Twitter Module
+.twitter-heading {
+  color:#00b9f3!important;
+}
+.ico-twitter {
+  width:23px;
+  height:17px;
+}
+table.content-img-floatleft.tweets {
+  tr {
+    td {
+      border:0;
+      padding-top:0;
+      &.figure.avatar {
+        width:50px;
+      }
+      &.content {
+        padding-left:8px;
+      }
+      p {
+        font-size:14px;
+        line-height:18px;
+        margin:0;
+      }
+    }
+  }
+}
+
+// Ads
+.ad {
+  margin:36px 0;
+}
+
+// Callouts
+.callout {
+  margin-bottom:18px;
+  td.callout-container {
+    padding:18px;
+  }
+  &.white {
+    h4, em, p {color:$orangeDark!important;}
+  }
+  &.gray {
+    background-color:$grayLight;
+    .inner {
+      background-color:$grayLight;
+    }
+  }
+  &.dk-gray {
+    background-color:$grayDark;
+    h2, h4, em, p {
+      color:unquote("#ffffff")!important;
+    }
+  }
+  &.orange {
+    background-color:$orange;
+    h2, h4, em, p {
+      color:unquote("#ffffff")!important;
+    }
+  }
+  &.dk-orange {
+    background-color:$orangeDark;
+    h2, h4, em, p {
+      color:unquote("#ffffff")!important;
+    }
+  }
+  &.dk-blue {
+    background-color:$blueDark;
+    h2, h4, em, p {
+      color:unquote("#ffffff")!important;
+    }
+  }
+  &.deep-blue {
+    background-color:#002C55;
+    h4, em, p, a {
+      color:unquote("#ffffff")!important;
+    }
+    .first {
+      font-size:22px;
+      margin-top:0;
+    }
+    .last {
+      line-height:14px;
+      margin:0;
+    }
+  }
+  &.lead-heading {
+    td.callout-container {
+      padding:10px;
+    }
+    h2 {
+      margin:0;
+    }
+  }
+  &.horiz-borders {
+    background-color:$white;
+    border-bottom:1px solid $gray;
+    border-top:1px solid $gray;
+    padding:3px 0;
+    div.inner {
+      border-bottom:1px solid $gray;
+      border-top:1px solid $gray;
+      padding:18px;
+    }
+  }
+  &.breaking-news-signup {
+    background-image:url('http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{3aaa27ef-71a4-4c22-b95b-38db3f82db1a}_bg-breakingnews.png');
+    background-position:0 0;
+    background-repeat:no-repeat;
+    .callout-container {
+      padding:13px 18px;
+    }
+  }
+  &.app-promo {
+    padding:0;
+  }
+}
+
+// Social Media & Pledge Block
+.column {
+  width: 300px;
+  float:left;
+  table { width:100%;}
+}
+.column tr td { padding: 15px; }
+.column tr td table.btn {
+  width:auto;
+  td { padding:0;}
+} 
+.column-wrap { 
+  background-color:$white;
+  border:1px solid $gray;
+  padding:0!important; 
+  margin:0 auto; 
+  max-width:600px!important;
+  .full-width-column {
+    padding:15px;
+    td {
+      max-width:566px;
+    }
+  }
+}
+.social .column {
+  width: 275px;
+  min-width: 275px;
+  float:left;
+}
+
+/* Be sure to place a .clear element after each set of columns, just to be safe */
+.clear { display: block; clear: both; }
