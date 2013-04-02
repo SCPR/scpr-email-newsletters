@@ -5,6 +5,8 @@ html xmlns="http://www.w3.org/1999/xhtml"
     meta content="text/html; charset=UTF-8" http-equiv="Content-Type"
       title == yield_content(:newsletter_title)
       
+      == yield_content(:javascript)
+      
       == stylesheet_link_tag 'all'
       style data-premailer="ignore" type="text/css"
         | @media only screen and (max-width: 600px){
@@ -187,9 +189,9 @@ body[leftmargin="0" marginheight="0" marginwidth="0" offset="0" topmargin="0"]
                                 span |
                                 a href="http://www.scpr.org/privacy/" Privacy
                                 span |
-                                a href="http://info.americanpublicmediagroup.org/LP=179" Update subscriptions
+                                a href="http://info.americanpublicmediagroup.org/LP=179?elq=~~eloqua..type--emailfield..syntax--recipientid~~&elqCampaignId=~~eloqua..type--campaign..campaignid--0..fieldname--id~~" Update subscriptions
                                 span |
-                                a href="http://info.americanpublicmediagroup.org/LP=180" Unsubscribe from all emails 
+                                a href="http://info.americanpublicmediagroup.org/LP=180?elq=~~eloqua..type--emailfield..syntax--recipientid~~&elqCampaignId=~~eloqua..type--campaign..campaignid--0..fieldname--id~~" Unsubscribe from all emails 
                           tr
                             td.footerContent colspan="3" style="padding-top:20px;" valign="top"
                               p.colophon &copy; 2013 Southern California Public Radio
@@ -197,3 +199,4 @@ body[leftmargin="0" marginheight="0" marginwidth="0" offset="0" topmargin="0"]
                               p.colophon Pasadena, CA 91105
                   /! END FOOTER \\
             /! END CONTAINER \\
+    == yield_content(:modals)
