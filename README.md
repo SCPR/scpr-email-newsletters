@@ -26,7 +26,7 @@ Either set up the project to use Pow, or run the Middleman development server:
 
 Core styles are provided in `all.scss`. These styles are based on [Zurb's Responsive Email Templates](http://www.zurb.com/playground/responsive-email-templates).
 
-I've also inclouded Thoughtbot's [Bourbon](http://bourbon.io) which gives you a lean but powerful library of SASS mixins to work with.
+I've also included Thoughtbot's [Bourbon](http://bourbon.io) which gives you a lean but powerful library of SASS mixins to work with.
 
 ### Handling Media Queries
 
