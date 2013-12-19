@@ -24,11 +24,13 @@ Either set up the project to use Pow, or run the Middleman development server:
 
 ### Stylesheet Authoring
 
-Core styles are provided in `all.scss`. These styles are based on [Zurb's Responsive Email Templates](http://www.zurb.com/playground/responsive-email-templates).
+Core styles are provided in `all.scss`. These styles are loosely based on [Zurb's Responsive Email Templates](http://www.zurb.com/playground/responsive-email-templates), with refactoring made to the markup and CSS in order to add support for Outlook mail clients. 
 
 I've also included Thoughtbot's [Bourbon](http://bourbon.io) which gives you a lean but powerful library of SASS mixins to work with.
 
 ### Handling Media Queries
+
+In order to use media queries effectively in email, they need to be preserved in a `<style>` block in the head of the HTML document, while all other css gets inlined into the body. To accomplish this, all media queries live in `layouts/layout.slim`, and include a `data-premailer="ignore"` attribute which tells the Premailer gem to ignore these styles when inlining CSS during the build process.  
 
 ## Build
 
@@ -42,7 +44,7 @@ The results of the build process are located in the imaginatively-named `build` 
 
 ## Post-build
 
-Each build template needs to be uploaded into Eloqua, most likely created as a template. Since Eloqua manages the email headers and footers as global files, you'll need to manuall remove the Global Header and Footer markup from the code before uploading to Eloqua.
+Each build template needs to be uploaded into Eloqua (or integrated in a separate project if you're sending emails via the Eloqua API). Since Eloqua injects its own email footers as global files, you'll need to manually remove the Global Footer markup from the code before uploading to Eloqua or sending the API.
 
 ## Todo
 
