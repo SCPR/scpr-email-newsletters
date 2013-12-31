@@ -103,6 +103,13 @@ img[align="left"] {
   margin-right:18px;
 }
 
+.heading-bg {
+  background-color:$white;
+  margin:-50px 10px 0;
+  padding:3px 10px 0;
+  position:relative;
+  z-index:200;
+}
 
 // Content Blocks
 table.content-img-floatleft {

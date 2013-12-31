@@ -62,6 +62,20 @@ h6 { font-weight:400; font-size: 14px;}
     }
   }
 }
+.timestamp-heading {
+  color:$orangeDark!important;
+  margin-top:0 !important;
+}
+.super-heading {
+  color:$orangeDark!important;
+  font-size:12px;
+  margin-bottom:0 !important;
+  text-transform:uppercase;
+  &+h2 {
+    margin-top:4px;
+  }
+}
+
 
 .collapse { margin:0!important;}
 .center {text-align:center;}
