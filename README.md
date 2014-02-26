@@ -1,4 +1,4 @@
-# KPCC Email Newsletters
+# SCPR Email Newsletters
 
 A simple project, built on top of [Middleman](http://middlemanapp.com/), for coding up HTML emails using all the modern front-end hotness (SASS, ERB, Slim) then compiling things down into CSS-inlined, road-hardened templates ready for the cold, cruel world of email clients. 
 
