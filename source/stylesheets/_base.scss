@@ -9,6 +9,11 @@ img{
   max-width:100%;
   outline:none;
   text-decoration:none;
+  &.thumb {
+    margin:18px 10px 0 0;
+    width:63px;
+    height:63px;
+  }
 }
 table,td{
   border-collapse:collapse;
@@ -31,16 +36,30 @@ table,td{
   width:100%;
 }
 
-/* ------------------------------------- 
-    TYPOGRAPHY 
+/* -------------------------------------
+    TYPOGRAPHY
 ------------------------------------- */
 * { font-family: Georgia, serif; }
 h1,h2,h3,h4,h5,h6 {
-font-family: Georgia, serif; line-height: 1.1; margin-bottom:15px; margin-top:10px; color:$black!important;
+font-family: Georgia, serif; line-height:1.1; margin-bottom:15px; margin-top:10px; color:$black!important;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color:$black!important;text-decoration:none;}
 
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size:60%; color:#6f6f6f; line-height:0; text-transform:none; }
+
+.number {
+  background:$orange;
+  color:$white;
+  display: inline-block;
+  font-family:Helvetica, Arial, sans-serif;
+  font-size:18px;
+  font-weight:300;
+  line-height:18px;
+  margin-top:18px;
+  margin-right:5px;
+  padding:4px 8px;
+}
+
 
 h1 { font-weight:400; font-size: 42px;line-height:50px;}
 h2 { font-weight:400; font-size: 32px;line-height:42px;}
@@ -66,6 +85,15 @@ h6 { font-weight:400; font-size: 14px;}
   color:$orangeDark!important;
   margin-top:0 !important;
 }
+.divider-heading {
+  color:$orangeDark!important;
+  margin-top:-36px !important;
+  span {
+    background-color:$white;
+    display:inline-block;
+    padding:4px 8px;
+  }
+}
 .super-heading {
   color:$orangeDark!important;
   font-size:12px;
@@ -80,18 +108,20 @@ h6 { font-weight:400; font-size: 14px;}
 .collapse { margin:0!important;}
 .center {text-align:center;}
 
-p, ul { 
+p, ul {
   color:#3d3d3d;
-  margin-bottom: 10px; 
-  font-weight: normal; 
-  font-size:15px; 
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size:15px;
   line-height:24px;
 }
 p {margin:14px 0 18px;}
 p.lead { font-size:17px; }
 p.last { margin-bottom:0px;}
+p.first {margin-top:0px;}
 p.caption{font-size:12px;}
 p.small{color:#666666!important;font-size:12px;}
+p.blurb {background-color:$grayLight;padding:4px;}
 
 ul {
   margin-left:12px;
@@ -112,7 +142,7 @@ ul {
       margin-left:4px;
     }
   }
-}  
+}
 hr {
   background-color:$white;
   border-bottom:1px solid $gray;
@@ -121,4 +151,8 @@ hr {
   border-left:0;
   height:3px;
   margin-bottom:18px;
+  &.single {
+    border-top:0;
+    height:1px;
+  }
 }
