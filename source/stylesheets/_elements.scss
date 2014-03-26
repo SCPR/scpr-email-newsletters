@@ -1,5 +1,5 @@
-/* ------------------------------------- 
-    UI ELEMENTS 
+/* -------------------------------------
+    UI ELEMENTS
 ------------------------------------- */
 
 a { color: $blueDark;text-decoration:none;}
@@ -74,7 +74,7 @@ table.social {
 }
 .social .soc-btn {
   border:1px solid $white;
-  margin-bottom:10px;  
+  margin-bottom:10px;
   display:block;
   td {
     padding: 5px 7px;
@@ -94,7 +94,7 @@ table.social {
 .kpcc { background-color: $orangeDark; }
 .ms { background-color: $black; }
 
-.sidebar .soc-btn { 
+.sidebar .soc-btn {
   display:block;
   width:100%;
 }
@@ -317,16 +317,17 @@ table.content-img-floatleft.tweets {
   float:left;
   table { width:100%;}
 }
-.column tr td { padding: 15px; }
+.column tr td {padding:15px;}
 .column tr td table.btn {
   width:auto;
   td { padding:0;}
-} 
-.column-wrap { 
+}
+.column.less-padding tr td { padding:5px 0;}
+.column-wrap {
   background-color:$white;
   border:1px solid $gray;
-  padding:0!important; 
-  margin:0 auto; 
+  padding:0!important;
+  margin:0 auto;
   max-width:600px!important;
   .full-width-column {
     padding:15px;
