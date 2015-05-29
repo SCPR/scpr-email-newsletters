@@ -1,0 +1,122 @@
+doctype html
+html lang="en" 
+  head
+    meta charset="utf-8" /
+    /! utf-8 works for most cases
+    meta content="width=device-width" name="viewport" /
+    /! Forcing initial-scale shouldn't be necessary
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    /! Use the latest (edge) version of IE rendering engine
+    title KPCC
+    /! The title tag shows in email notifications, like Android 4.4.
+    == stylesheet_link_tag 'simple'
+    style data-premailer="ignore" type="text/css"
+      | @media screen and (max-width: 600px), screen and (max-width: 600px) {
+      | .email-container {
+      | width: 92% !important;
+      | }
+      | img[class="fluid"],
+      | img[class="fluid-centered"] {
+      | width: 100% !important;
+      | max-width: 100% !important;
+      | height: auto !important;
+      | margin: auto !important;
+      | }
+      | img[class="fluid-centered"] {
+      | margin: auto !important;
+      | }
+      | td[class="stack-column"],
+      | td[class="stack-column-center"],
+      | td[class="stack-column-spacer"],
+      | td[class="stack-column-spacer-collapse"]
+      | {
+      | display: block !important;
+      | padding: 4% 0 !important;
+      | width: 100% !important;
+      | direction: ltr !important;
+      | }
+      | td[class="stack-column-center"] {
+      | text-align: center !important;
+      | }
+      | td[class="stack-column-spacer"] {
+      | padding: 1% 0 !important;
+      | }
+      | td[class="stack-column-spacer-collapse"] {
+      | display: none;
+      | font-size: 0;
+      | max-height: 0;
+      | line-height: 0;
+      | padding: 0 !important;
+      | mso-hide: all;
+      | }
+      | td[class="data-table-th"] {
+      | display: none !important;
+      | }
+      | td[class="data-table-th"] {
+      | display: none !important;
+      | }
+      | td[class="data-table-td"],
+      | td[class="data-table-td-title"] {
+      | display: block !important;
+      | width: 100% !important;
+      | border: 0 !important;
+      | }
+      | td[class="data-table-td-title"] {
+      | font-weight: bold;
+      | color: #333333;
+      | padding: 10px 0 0 0 !important;
+      | border-top: 2px solid #eeeeee !important;
+      | }
+      | td[class="data-table-td"] {
+      | padding: 5px 0 0 0 !important
+      | }
+      | td[class="data-table-mobile-divider"] {
+      | display: block !important;
+      | height: 20px;
+      | }
+      | .hide-mobile {
+      | display: none;
+      | font-size: 0;
+      | max-height: 0;
+      | line-height: 0;
+      | padding: 0;
+      | mso-hide: all;
+      | }
+      | .card-datatable {
+      | width: 90% !important;
+      | }
+      | .sharing-link {
+      | display: block;
+      | text-align: left;
+      | }
+      | .footer-disclaimer {
+      | margin: 0 auto;
+      | width: 90%;
+      | }
+      | .body-table {
+      | background: transparent !important;
+      | }
+      | }
+
+  body bgcolor="#EFEFEF" leftmargin="0" marginheight="0" marginwidth="0" style=("margin:0; padding:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;") topmargin="0" 
+    table bgcolor="#EFEFEF" border="0" cellpadding="0" cellspacing="0" style=("border-collapse:collapse; table-layout:fixed; margin:0 auto;") width="100%" 
+      tr
+        td
+          /! Visually Hidden Preheader Text : BEGIN
+          div style=("display:none; visibility:hidden; opacity:0; color:transparent; height:0; width:0; line-height:0; overflow:hidden; mso-hide: all;") 
+            | (Optional) This text will appear in the inbox preview, but not the email body.
+          /! Visually Hidden Preheader Text : END
+          /! Email wrapper : BEGIN
+          br
+          br
+          table.email-container align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="width:600px;" width="600"
+            tr
+              td
+                /! Logo + Links : BEGIN
+                table border="0" cellpadding="0" cellspacing="0" width="100%" 
+                  tr
+                    = yield_content :email_titling
+                = yield
+                      
+    = yield_content :post_body
+    
