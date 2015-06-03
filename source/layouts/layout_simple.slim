@@ -11,6 +11,16 @@ html lang="en"
     /! The title tag shows in email notifications, like Android 4.4.
     == stylesheet_link_tag 'simple'
     style data-premailer="ignore" type="text/css"
+      | @media only screen and (max-width: 600px){
+      | table[id=bodyTable]{
+      | padding:10px !important;
+      | }
+      | @media only screen and (max-width: 600px){
+      | table[id=templateContainer]{
+      | max-width:600px !important;
+      | width:100% !important;
+      | }
+      | }
       | @media screen and (max-width: 600px), screen and (max-width: 600px) {
       | .email-container {
       | width: 92% !important;
@@ -93,12 +103,32 @@ html lang="en"
       | margin: 0 auto;
       | width: 90%;
       | }
-      | .body-table {
-      | background: transparent !important;
+      | }
+      | @media only screen and (max-width: 600px){
+      | td[class=footerContent]{
+      | font-size:13px !important;
+      | line-height:150% !important;
+      | padding-left:10px !important;
+      | padding-right:10px !important;
       | }
       | }
 
-  body bgcolor="#EFEFEF" leftmargin="0" marginheight="0" marginwidth="0" style=("margin:0; padding:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;") topmargin="0" 
+  body bgcolor="#EFEFEF" leftmargin="0" marginheight="0" marginwidth="0" style=("margin:0; padding:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;min-width: 100%;") topmargin="0" 
+    center
+      table#bodyTable border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"
+        tr
+          td align="center" valign="top"
+            /! // BEGIN GLOBAL HEADER
+            table.globalhead border="0" cellpadding="10" cellspacing="0" width="100%"
+              tr
+                td.globalheadContent align="center" valign="top"
+                  table#templateContainer border="0" cellpadding="0" cellspacing="0" width="600"
+                    tr
+                      td.preheaderContent
+                        img#logo[src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{6462a49c-cb72-4b3d-a65a-d4c18cc766db}_logo-kpcc-sm.png" width="112" height="16"]
+                      td.preheaderContent align="right" width="220"
+                        <a class="view-browser" href="http://app.info.americanpublicmediagroup.org/e/es?s=<eloqua%20type='emailfield'%20syntax='siteid'/>&e=<eloqua%20type='emailfield'%20syntax='elqemailsaveguid'/>&elq=<eloqua%20type='emailfield'%20syntax='recipientid'/>"> <img src="http://images.info.americanpublicmediagroup.org/EloquaImages/clients/AmericanPublicMediaGroup/{7b8c63c5-95cd-4db9-b9d2-0a0f9e4943c1}_ico-view-browser.png" width="14" height="19"> View in Browser</a>
+            /! END GLOBAL HEADER \\
     table bgcolor="#EFEFEF" border="0" cellpadding="0" cellspacing="0" style=("border-collapse:collapse; table-layout:fixed; margin:0 auto;") width="100%" 
       tr
         td
@@ -112,11 +142,14 @@ html lang="en"
           table.email-container align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="width:600px;" width="600"
             tr
               td
-                /! Logo + Links : BEGIN
+                /! Titling
                 table border="0" cellpadding="0" cellspacing="0" width="100%" 
                   tr
-                    = yield_content :email_titling
+                    td valign="middle" align="center"
+                      = yield_content :email_titling
                 = yield
-                      
-    = yield_content :post_body
+    br
+    br
+    br    
+= yield_content :post_body
     

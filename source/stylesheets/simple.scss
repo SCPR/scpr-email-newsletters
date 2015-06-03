@@ -94,3 +94,33 @@ p {
   line-height: 1.2em;
   margin: 0;
 }
+
+
+// Global Header Layout Styles
+// ----------------------------------------
+.globalhead{
+  background-color:#3d3d3d;
+  border-bottom:0;
+  td.globalheadContent {
+    padding:9px;
+  }
+  a.view-browser:link, a.view-browser:visited, a.view-browser.yshortcuts {
+    color:#747474;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    text-decoration:none;
+    img {
+      margin-right:4px;
+      width:14px;
+      height:19px;
+      vertical-align:bottom;
+    }
+  }
+}
+.preheaderContent{
+  color:#FFFFFF;
+  font-family:Helvetica;
+  font-size:11px;
+  line-height:125%;
+}
